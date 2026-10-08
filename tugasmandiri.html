@@ -1,184 +1,327 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
+
 <head>
-    <title>Jadwal Pelajaran</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #1e293b;
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1600/900') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            background: #38bdf8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #0284c7;
+        }
+
+        .section {
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 32px;
+            color: #0284c7;
+            margin-bottom: 5px;
+        }
+
+        .faq-item {
+            text-align: left;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"],
+        .contact-form input[type="reset"] {
+            padding: 12px 25px;
+            background: #38bdf8;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form input[type="submit"]:hover,
+        .contact-form input[type="reset"]:hover {
+            background: #0284c7;
+        }
+
+        footer {
+            background: #1e293b;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
-    <center>
-        <b><font size="4">JADWAL PELAJARAN</font></b><br>
-        <b><font size="4">KONSENTRASI KEAHLIAN REKAYASA PERANGKAT LUNAK (RPL)</font></b><br>
-        <font size="4">SEMESTER GANJIL TAHUN PELAJARAN 2026/2027</font>
-    </center>
-    <br>
-    <table border="1" cellpadding="2" cellspacing="0" width="100%" align="center">
-        <tr align="center" bgcolor="#c4d79b">
-            <th rowspan="2">NO</th>
-            <th rowspan="2" colspan="2">TINGKAT</th>
-            <th colspan="11">SENIN</th>
-            <th colspan="13">SELASA</th>
-            <th colspan="11">RABU</th>
-            <th colspan="13">KAMIS</th>
-            <th colspan="7">JUMAT</th>
-        </tr>
-        <tr align="center" bgcolor="#c4d79b">
-            <!-- Senin -->
-            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
-            <!-- Selasa -->
-            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th>
-            <!-- Rabu -->
-            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
-            <!-- Kamis -->
-            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th>
-            <!-- Jumat -->
-            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-        </tr>
-        <tr align="center">
-            <td rowspan="3"><b>1</b></td>
-            <td rowspan="3"><b>X RPL A</b></td>
-            <td>M.Diklat</td>
-            <td rowspan="9">A<br>P<br>E<br>L<br>/<br>M<br>B<br>G</td>
-            <td colspan="2" bgcolor="#c894fe">SEJ</td>
-            <td colspan="4" bgcolor="#cefe54">BING</td>
-            <td colspan="4" bgcolor="#fee3cb">BIND</td>
-            <td rowspan="9">M<br>B<br>G</td>
-            <td colspan="4" bgcolor="#d9d9d9">INKA</td>
-            <td colspan="2" bgcolor="#86b986">PP</td>
-            <td colspan="6" bgcolor="#ffffcb">IPAS</td>
-            <td rowspan="9">R<br>E<br>H<br>A<br>T<br>/<br>M<br>B<br>G</td>
-            <td colspan="4" bgcolor="#ff2ea3">MAT</td>
-            <td colspan="2" bgcolor="#d9d9d9">KKA</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td rowspan="9">M<br>B<br>G</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="2" bgcolor="#87ceeb">LOK</td>
-            <td colspan="2" bgcolor="#e26b0a">SENI</td>
-            <td rowspan="9">K<br>E<br>A<br>G<br>A<br>M<br>A<br>A<br>N<br></td>
-            <td colspan="3" bgcolor="#ddebf7">PABP</td>
-            <td colspan="3" bgcolor="#00f0a0">PJOK</td>
-        </tr>
-        <tr align="center">
-            <td>Guru</td>
-            <td colspan="2">NOV</td>
-            <td colspan="4">SIN</td>
-            <td colspan="4">MIT</td>
-            <td colspan="4">TYA</td>
-            <td colspan="2">JGA</td>
-            <td colspan="6">ALI</td>
-            <td colspan="4">NKD</td>
-            <td colspan="2">ILA</td>
-            <td colspan="4">DIY/DAN</td>
-            <td colspan="4">DAN</td>
-            <td colspan="4">MAH</td>
-            <td colspan="2">YGN</td>
-            <td colspan="2">BCA</td>
-            <td colspan="3">IMA</td>
-            <td colspan="3">REJ</td>
-        </tr>
-        <tr align="center">
-            <td>Ruang</td>
-            <td colspan="10">R. 24</td>
-            <td colspan="4">Lab. BI</td>
-            <td colspan="8">Lab. RPL 4 / R. 24</td>
-            <td colspan="10">Lab. RPL 3</td>
-            <td colspan="12">Lab. RPL 3</td>
-            <td colspan="3">R. 24</td>
-            <td colspan="3">LBNA</td>
-        </tr>
-        <tr align="center">
-            <td rowspan="3"><b>2</b></td>
-            <td rowspan="3"><b>X RPL B</b></td>
-            <td>M.Diklat</td>
-            <td colspan="2" bgcolor="#86b986">PP</td>
-            <td colspan="2" bgcolor="#c894fe">SEJ</td>
-            <td colspan="3" bgcolor="#ddebf7">PABP</td>
-            <td colspan="3" bgcolor="#00f0a0">PJOK</td>
-            <td colspan="4" bgcolor="#fee3cb">BIND</td>
-            <td colspan="4" bgcolor="#d9d9d9">INKA</td>
-            <td colspan="4" bgcolor="#ff2ea3">MAT</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="6" bgcolor="#ffffcb">IPAS</td>
-            <td colspan="4" bgcolor="#cefe54">BING</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="2" bgcolor="#d9d9d9">KKA</td>
-            <td colspan="2" bgcolor="#e26b0a">SENI</td>
-            <td colspan="2" bgcolor="#87ceeb">LOK</td>
-        </tr>
-        <tr align="center">
-            <td>Guru</td>
-            <td colspan="2">JGA</td>
-            <td colspan="2">NOV</td>
-            <td colspan="3">IMA</td>
-            <td colspan="3">YIK</td>
-            <td colspan="4">MIT</td>
-            <td colspan="4">TYA</td>
-            <td colspan="4">NKD</td>
-            <td colspan="4">DAN</td>
-            <td colspan="6">ALI</td>
-            <td colspan="4">SIN</td>
-            <td colspan="4">DIY/DAN</td>
-            <td colspan="4">MAH</td>
-            <td colspan="2">ILA</td>
-            <td colspan="2">BCA</td>
-            <td colspan="2">DEV</td>
-        </tr>
-        <tr align="center">
-            <td>Ruang</td>
-            <td colspan="7">R. 25</td>
-            <td colspan="3">LBNA</td>
-            <td colspan="4">R. 25</td>
-            <td colspan="4">Lab. Bing</td>
-            <td colspan="4">R. 25</td>
-            <td colspan="10">Lab. RPL 1</td>
-            <td colspan="12">Lab. RPL 1</td>
-            <td colspan="6">R. 25</td>
-        </tr>
-        <tr align="center">
-            <td rowspan="3"><b>3</b></td>
-            <td rowspan="3"><b>X RPL C</b></td>
-            <td>M.Diklat</td>
-            <td colspan="6" bgcolor="#ffffcb">IPAS</td>
-            <td colspan="4" bgcolor="#cefe54">BING</td>
-            <td colspan="4" bgcolor="#ff2ea3">MAT</td>
-            <td colspan="2" bgcolor="#86b986">PP</td>
-            <td colspan="3" bgcolor="#ddebf7">PABP</td>
-            <td colspan="3" bgcolor="#00f0a0">PJOK</td>
-            <td colspan="4" bgcolor="#d9d9d9">INKA</td>
-            <td colspan="2" bgcolor="#d9d9d9">KKA</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="4" bgcolor="#fee3cb">BIND</td>
-            <td colspan="4" bgcolor="#d9d9d9">DDK</td>
-            <td colspan="2" bgcolor="#e26b0a">SENI</td>
-            <td colspan="2" bgcolor="#87ceeb">LOK</td>
-            <td colspan="2" bgcolor="#c894fe">SEJ</td>
-        </tr>
-        <tr align="center">
-            <td>Guru</td>
-            <td colspan="6">ALI</td>
-            <td colspan="4">SIN</td>
-            <td colspan="4">NKD</td>
-            <td colspan="2">SAR</td>
-            <td colspan="3">IMA</td>
-            <td colspan="3">HSN</td>
-            <td colspan="4">RIF</td>
-            <td colspan="6">MAH</td>
-            <td colspan="4">DIY/MAH</td>
-            <td colspan="4">MIT</td>
-            <td colspan="4">DAN</td>
-            <td colspan="2">BCA</td>
-            <td colspan="2">YGN</td>
-            <td colspan="2">NOV</td>
-        </tr>
-        <tr align="center">
-            <td>Ruang</td>
-            <td colspan="10">R. 26</td>
-            <td colspan="9">R. 26</td>
-            <td colspan="3">LABANA</td>
-            <td colspan="10">Lab. RPL 2</td>
-            <td colspan="12">Lab. RPL 2</td>
-            <td colspan="6">R. 26</td>
-        </tr>
-    </table>
+    <header>
+        <h1>BrandName</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#pricing">Harga</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Selamat Datang di Website Kami</h2>
+        <p>Kami menghadirkan solusi terbaik untuk bisnis Anda dengan teknologi modern yang memudahkan.</p>
+        <button>Mulai Sekarang</button>
+    </section>
+
+    <section class="section" id="features">
+        <h3>Fitur Unggulan</h3>
+        <p>Berbagai layanan yang kami tawarkan untuk mendukung perkembangan bisnis Anda.</p>
+        <div class="cards">
+            <div class="card">🚀 Cepat & Efisien</div>
+            <div class="card">🔒 Aman & Terpercaya</div>
+            <div class="card">📱 Mudah Digunakan</div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h3>Tentang Kami</h3>
+        <p>Kami adalah tim profesional yang berfokus pada inovasi digital untuk membantu perusahaan berkembang lebih pesat.</p>
+    </section>
+
+    <section class="section" id="testimonials">
+        <h3>Apa Kata Mereka</h3>
+        <p>Pengalaman dan tanggapan dari para pelanggan yang telah menggunakan layanan kami.</p>
+        <div class="cards">
+            <div class="card">
+                <p><i>"Layanan sangat cepat dan sangat membantu efisiensi operasional bisnis kami."</i></p>
+                <br>
+                <b>- Ahmad Santoso</b>
+            </div>
+            <div class="card">
+                <p><i>"Sistem yang sangat aman, terpercaya, dan sangat mudah digunakan oleh tim."</i></p>
+                <br>
+                <b>- Budi Rahardjo</b>
+            </div>
+            <div class="card">
+                <p><i>"Dukungan tim profesional dan solusi digital yang diberikan sangat berkualitas."</i></p>
+                <br>
+                <b>- Citra Lestari</b>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <h3>Paket Harga</h3>
+        <p>Pilih paket harga yang sesuai dengan skala dan kebutuhan perkembangan bisnis Anda.</p>
+        <div class="cards">
+            <div class="card">
+                <h4>Paket Dasar</h4>
+                <h2>Rp 150.000</h2>
+                <p>Fitur dasar untuk pemula</p>
+                <hr><br>
+                <p>Akses Layanan Utama</p>
+                <p>Dukungan Email</p>
+                <br>
+                <button>Pilih Paket</button>
+            </div>
+            <div class="card">
+                <h4>Paket Bisnis</h4>
+                <h2>Rp 300.000</h2>
+                <p>Solusi lengkap untuk bisnis</p>
+                <hr><br>
+                <p>Semua Fitur Dasar</p>
+                <p>Dukungan 24/7</p>
+                <br>
+                <button>Pilih Paket</button>
+            </div>
+            <div class="card">
+                <h4>Paket Utama</h4>
+                <h2>Rp 500.000</h2>
+                <p>Kapasitas penuh & kustom</p>
+                <hr><br>
+                <p>Fitur Kustom Khusus</p>
+                <p>Prioritas Layanan</p>
+                <br>
+                <button>Pilih Paket</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <h3>Pertanyaan Umum (FAQ)</h3>
+        <p>Berikut adalah jawaban atas pertanyaan yang paling sering diajukan oleh pengguna.</p>
+        <div class="cards">
+            <div class="card faq-item">
+                <b>Bagaimana cara memulai menggunakan layanan?</b>
+                <p>Anda dapat memilih paket layanan pada bagian Paket Harga atau menekan tombol Mulai Sekarang.</p>
+            </div>
+            <div class="card faq-item">
+                <b>Apakah tersedia bantuan teknis?</b>
+                <p>Ya, tim kami menyediakan layanan dukungan untuk membantu kendala Anda.</p>
+            </div>
+            <div class="card faq-item">
+                <b>Apakah paket layanan dapat diubah?</b>
+                <p>Tentu, Anda dapat memperbarui paket layanan kapan saja sesuai kebutuhan bisnis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Hubungi Kami</h3>
+        <p>Silakan isi formulir di bawah ini untuk mengirimkan pesan atau pertanyaan kepada tim kami.</p>
+        <form action="" method="post" class="contact-form">
+            <b>Nama Lengkap:</b><br>
+            <input type="text" name="nama" size="30" value="Enter your name here."><br><br>
+
+            <b>Kategori Pertanyaan:</b><br>
+            <select name="kategori" size="1">
+                <option value="umum" selected>Pertanyaan Umum</option>
+                <option value="layanan">Layanan</option>
+                <option value="dukungan">Dukungan Teknis</option>
+            </select><br><br>
+
+            <b>Pesan Anda:</b><br>
+            <textarea name="pesan" cols="30" rows="6"></textarea><br><br>
+
+            <input type="submit" name="kirim" value="Kirim Pesan">
+            <input type="reset" name="reset" value="Clear">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BrandName. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
